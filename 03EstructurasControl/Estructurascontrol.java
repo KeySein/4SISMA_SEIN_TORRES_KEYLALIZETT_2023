@@ -228,7 +228,7 @@ class Estructura {
                             radio = entrada.nextDouble();
 
                             volumen = (4.0 / 3.0) * Math.PI * Math.pow(radio, 3);
-
+ 
                             System.out.println("Volumen de la esfera: " + volumen);
                             break;
 
@@ -240,7 +240,7 @@ class Estructura {
 
                             volumen = Math.PI * Math.pow(radio, 2) * altura;
 
-                            System.out.println("Volumen del cilindro: " + volumen);
+                            System.out.println("Tu volumen del cilindro:  " + volumen);
                             break;
 
                         default:
