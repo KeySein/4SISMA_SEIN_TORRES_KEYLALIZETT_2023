@@ -19,10 +19,10 @@ de seleccion para elegir alguna de las 14 opciones siguientes:
 import java.util.Scanner;
 class Estructura {
         public static void main(String[] args) {
-      
+        Scanner scanner = new Scanner(System.in);
         Scanner entrada = new Scanner(System.in);
 
-        int opcion, numbinario, total, cantidadproducto, edad, numero, positivos = 0, negativos = 0;
+        int opcion, numbinario, total, cantidadproducto, edad, numero, positivos = 0, negativos = 0, num;
         float precio, resultado, compra = 0, temperatura;
         double descuento = 0, C, F, K, R, base, altura, area, perimetro, radio, volumen;
         String nombreproducto, nombres = "", binario = "", respuesta;
@@ -250,12 +250,30 @@ class Estructura {
                     break;
 
             case 7:
+
                 break;
             case 8:
-                break;
+               System.out.print("Ingrese el número a calcular: ");
+                int num = scanner.nextInt();
+                  int acum = 1;
+                  for (int x = 1; x <= num; x++) {
+                  acum *= x;
+                  System.out.println(acum);
+                }
             case 9:
                 break;
             case 10:
+                      System.out.print("Ingrese el tamaño del cuadrado: ");
+                      int tamanio = scanner.nextInt();
+                      for (int i = 1; i <= tamanio; i++) {
+                      for (int j = 1; j <= tamanio; j++) {
+                      if (i == 1 || i == tamanio || j == 1 || j == tamanio) {
+                     System.out.print("*");
+                     } else {
+                      System.out.print(" ");
+                     }
+                     }
+                     }
                 break;
             case 11:
                 break;
