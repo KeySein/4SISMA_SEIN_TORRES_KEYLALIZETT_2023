@@ -23,10 +23,10 @@ class Estructura {
         Scanner entrada = new Scanner(System.in);
 
         int opcion, numbinario, total, cantidadproducto, edad, numero, positivos = 0, negativos = 0, num;
-        float precio, resultado, compra = 0, temperatura;
+        float precio, resultado, compra = 0, temperatura, num1, num2;
         double descuento = 0, C, F, K, R, base, altura, area, perimetro, radio, volumen;
         String nombreproducto, nombres = "", binario = "", respuesta;
-        char letra;
+        char letra, operador;
 
         do {
             System.out.println("     Bienvenido al programa");
@@ -280,7 +280,43 @@ class Estructura {
             case 12:
                 break;
             case 13:
+              System.out.println("Calculadora Simple");
+              System.out.print("Ingresa el primer número: ");
+              num1 = scanner.nextDouble();
+
+              System.out.print("Ingresa un operador (+, -, *, /): ");
+              operador = scanner.next().charAt(0);
+
+               System.out.print("Ingresa el segundo número: ");
+              num2 = scanner.nextDouble();
+
+               switch (operador) {
+               case '+':
+                resultado = num1 + num2;
+                System.out.println("Resultado: " + resultado);
                 break;
+                case '-':
+                resultado = num1 - num2;
+                System.out.println("Resultado: " + resultado);
+                break;
+                 case '*':
+                resultado = num1 * num2;
+                System.out.println("Resultado: " + resultado);
+                break;
+                 case '/':
+                   if (num2 != 0) {
+                    resultado = num1 / num2;
+                    System.out.println("Resultado: " + resultado);
+                  } else {
+                    System.out.println("Error: No se puede dividir por cero.");
+                    }
+                break;
+            default:
+                System.out.println("Operador no válido.");
+                     }
+                   }
+                 }   
+               break;
             case 14:
 
                 break;
