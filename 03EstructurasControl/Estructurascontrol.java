@@ -276,8 +276,73 @@ class Estructura {
                      }
                 break;
             case 11:
+             int n = 5; 
+        System.out.println("Patrón 1: Pirámide de números");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= i; k++) {
+                System.out.print(k);
+            }
+            System.out.println();
+        }
+        System.out.println("\nPatrón 2: Triángulo de números");
+        int num = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num + " ");
+                num++;
+            }
+            System.out.println();
+        }
+        System.out.println("\nPatrón 3: Cuadrado de números");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
                 break;
             case 12:
+            Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el tamaño del diamante (debe ser un número impar): ");
+        int n = scanner.nextInt();
+        
+        if (n % 2 == 0) {
+            System.out.println("El tamaño debe ser un número impar.");
+            return;
+        }
+        
+        int espaciosExternos = n / 2;
+        int espaciosInternos = 0;
+        
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= espaciosExternos; j++) {
+                System.out.print(" ");
+            }
+            
+            System.out.print("*");
+            
+            for (int j = 1; j <= espaciosInternos; j++) {
+                System.out.print(" ");
+            }
+            
+            if (i != 1 && i != n) {
+                System.out.print("*");
+            }
+            
+            System.out.println();
+            
+            if (i <= n / 2) {
+                espaciosExternos--;
+                espaciosInternos += 2;
+            } else {
+                espaciosExternos++;
+                espaciosInternos -= 2;
+            }
+        }
+        
+        scanner.close();
                 break;
             case 13:
               System.out.println("Calculadora Simple");
@@ -328,5 +393,4 @@ class Estructura {
         letra = entrada.next().charAt(0);
 
     } while (letra == 'S' || letra == 's');
-}
 }
