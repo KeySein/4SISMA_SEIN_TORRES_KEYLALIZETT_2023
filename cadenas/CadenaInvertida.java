@@ -14,6 +14,7 @@ public class CadenaInvertida {
         char car = cadena.charAt(i);
         invertida += car;
 
+        
     }
     System.out.println("cadena invertida es :" + invertida);
 }
