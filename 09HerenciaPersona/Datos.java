@@ -33,7 +33,7 @@ public class Datos {
         int numbol = Interger.parseInt(
             JOptionPane.showInputDialog( 
                 "ingresa el numero de boleta"));
-                String nom = JOptionPane.showInputDialog
+                String nom = JOptionPane.showInputDialog();
 
     }
 }
