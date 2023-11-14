@@ -1,14 +1,14 @@
 
 
-public class persona {
+public class Persona {
     private String nombre;
     private int edad;
     private char genero;
 
-    public persona(){
+    public Persona(){
 
     }
-    public persona(String nombre, int edad, char genero){
+    public Persona(String nombre, int edad, char genero){
        this.nombre = nombre;
         this.edad = edad;
         this.genero = genero;
